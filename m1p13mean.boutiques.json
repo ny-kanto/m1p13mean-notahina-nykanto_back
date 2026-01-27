@@ -1,0 +1,152 @@
+[
+  {
+    "nom": "Zara",
+    "categorie": "Mode",
+    "etage": 1,
+    "contact": {
+      "email": "contact@zara.mg",
+      "tel": "034 11 222 33"
+    },
+    "horaires": {
+      "ouverture": "09:00",
+      "fermeture": "20:00"
+    },
+    "statut": "Ouvert",
+    "created_at": "2024-01-27"
+  },
+  {
+    "nom": "Jumbo Score",
+    "categorie": "Alimentation",
+    "etage": 0,
+    "contact": {
+      "email": "info@jumbo.mg",
+      "tel": "032 44 555 66"
+    },
+    "horaires": {
+      "ouverture": "08:30",
+      "fermeture": "21:00"
+    },
+    "statut": "Ouvert",
+    "created_at": "2024-01-27"
+  },
+  {
+    "nom": "Samsung Experience",
+    "categorie": "Technologie",
+    "etage": 2,
+    "contact": {
+      "email": "support@samsung-mg.com",
+      "tel": "033 77 888 99"
+    },
+    "horaires": {
+      "ouverture": "10:00",
+      "fermeture": "19:00"
+    },
+    "statut": "Ouvert",
+    "created_at": "2024-01-27"
+  },
+  {
+    "nom": "Beauty Success",
+    "categorie": "Cosmétique",
+    "etage": 1,
+    "contact": {
+      "email": "beauty@success.mg",
+      "tel": "034 00 111 22"
+    },
+    "horaires": {
+      "ouverture": "09:00",
+      "fermeture": "19:30"
+    },
+    "statut": "Fermé",
+    "created_at": "2024-01-27"
+  },
+  {
+    "nom": "Courir",
+    "categorie": "Sport",
+    "etage": 2,
+    "contact": {
+      "email": "shop@courir.mg",
+      "tel": "032 99 888 77"
+    },
+    "horaires": {
+      "ouverture": "09:00",
+      "fermeture": "20:00"
+    },
+    "statut": "Ouvert",
+    "created_at": "2024-01-27"
+  },
+  {
+    "nom": "La City Food Court",
+    "categorie": "Restauration",
+    "etage": 3,
+    "contact": {
+      "email": "food@lacity.mg",
+      "tel": "033 22 333 44"
+    },
+    "horaires": {
+      "ouverture": "11:00",
+      "fermeture": "23:00"
+    },
+    "statut": "Ouvert",
+    "created_at": "2024-01-27"
+  },
+  {
+    "nom": "Home & Cook",
+    "categorie": "Maison",
+    "etage": 0,
+    "contact": {
+      "email": "home@cook.mg",
+      "tel": "034 55 444 33"
+    },
+    "horaires": {
+      "ouverture": "09:00",
+      "fermeture": "18:30"
+    },
+    "statut": "Fermé",
+    "created_at": "2024-01-27"
+  },
+  {
+    "nom": "Optical Center",
+    "categorie": "Santé",
+    "etage": 1,
+    "contact": {
+      "email": "optic@center.mg",
+      "tel": "032 11 000 99"
+    },
+    "horaires": {
+      "ouverture": "08:30",
+      "fermeture": "18:00"
+    },
+    "statut": "Ouvert",
+    "created_at": "2024-01-27"
+  },
+  {
+    "nom": "Librairie Mix",
+    "categorie": "Loisirs",
+    "etage": 2,
+    "contact": {
+      "email": "contact@mix.mg",
+      "tel": "033 44 555 11"
+    },
+    "horaires": {
+      "ouverture": "09:00",
+      "fermeture": "19:00"
+    },
+    "statut": "Ouvert",
+    "created_at": "2024-01-27"
+  },
+  {
+    "nom": "Orange Madagascar",
+    "categorie": "Télécom",
+    "etage": 1,
+    "contact": {
+      "email": "service.client@orange.mg",
+      "tel": "032 00 123 45"
+    },
+    "horaires": {
+      "ouverture": "08:30",
+      "fermeture": "19:00"
+    },
+    "statut": "Ouvert",
+    "created_at": "2024-01-27"
+  }
+]
