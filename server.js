@@ -1,18 +1,21 @@
-const express = require('express');
-const mongoose = require('mongoose');
+import express from "express";
+import dotenv from "dotenv";
+import cors from "cors";
+import { connectDB } from "./config/db.js";
+import boutiqueRoutes from "./routes/boutique.routes.js";
+
+dotenv.config();
 const app = express();
 
-const dbName = 'm1p13mean';
+app.use(cors());
+app.use(express.json());
 
-mongoose.connect(`mongodb://127.0.0.1:27017/${dbName}`)
-    .then(() => console.log("✅ Connexion à MongoDB réussie !"))
-    .catch(err => console.error("❌ Erreur de connexion :", err));
+// MongoDB
+connectDB(process.env.MONGODB_URI);
 
-app.get('/api/test', (req, res) => {
-    res.json({ message: "Le serveur Express répond bien !" });
-});
+// Routes
+app.use("/boutiques", boutiqueRoutes);
 
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`🚀 Serveur lancé sur http://localhost:${PORT}`);
-});
+// Démarrer le serveur
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Serveur démarré sur http://localhost:${PORT}`));
