@@ -10,6 +10,18 @@ export const getAllProduits = async (req, res) => {
     }
 }
 
+// GET /products/boutique/:boutiqueId
+export const getProductsByBoutique = async (req, res) => {
+  try {
+    const { boutiqueId } = req.params;
+    const products = await Produit.find({ boutiqueId });
+    res.json(products);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+
 // Get /produits/:id
 export const findProduitById = async (req, res) => {
     try {
