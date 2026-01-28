@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:4200',
+  origin: 'https://m1p13mean-notahina-nykanto-front.netlify.app',
   credentials: true
 }));
 
