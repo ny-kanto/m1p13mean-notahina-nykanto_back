@@ -12,7 +12,17 @@ const router = express.Router();
 
 router.get('/boutique/:boutiqueId', getProductsByBoutique);
 router.get('/:id', findProduitById);
-router.post('/', upload.array('images', 5), createProduit);
+router.post('/', (req, res, next) => {
+    upload.array('images', 5)(req, res, err => {
+        if (err) {
+            return res.status(413).json({
+                message: 'Image trop volumineuse (max 2MB par image)'
+            });
+        }
+        next();
+    });
+}, createProduit);
+
 router.put('/:id', updateProduit);
 router.delete('/:id', deleteProduit);
 
