@@ -1,0 +1,82 @@
+[
+  {
+    "nom": "Pantalon Oversize",
+    "prix": 30.99,
+    "description": "Jean oversize confortable",
+    "stock": 60,
+    "boutiqueId": { "$oid": "697ae5ab6a59e6ebe21984d7" },
+    "image": "https://exemple.com/images/pantalon-oversize.jpg"
+  },
+  {
+    "nom": "T-shirt Blanc Classique",
+    "prix": 12.50,
+    "description": "T-shirt blanc en coton",
+    "stock": 120,
+    "boutiqueId": { "$oid": "697ae5ab6a59e6ebe21984d7" },
+    "image": "https://exemple.com/images/tshirt-blanc.jpg"
+  },
+  {
+    "nom": "Veste en Jean",
+    "prix": 55.00,
+    "description": "Veste en jean style urbain",
+    "stock": 35,
+    "boutiqueId": { "$oid": "697ae5ab6a59e6ebe21984d7" },
+    "image": "https://exemple.com/images/veste-jean.jpg"
+  },
+  {
+    "nom": "Sweat à Capuche",
+    "prix": 40.99,
+    "description": "Sweat à capuche chaud et doux",
+    "stock": 50,
+    "boutiqueId": { "$oid": "697ae5ab6a59e6ebe21984d7" },
+    "image": "https://exemple.com/images/sweat-capuche.jpg"
+  },
+  {
+    "nom": "Short en Coton",
+    "prix": 18.99,
+    "description": "Short léger pour l’été",
+    "stock": 80,
+    "boutiqueId": { "$oid": "697ae5ab6a59e6ebe21984d7" },
+    "image": "https://exemple.com/images/short-coton.jpg"
+  },
+  {
+    "nom": "Chemise Manches Longues",
+    "prix": 27.99,
+    "description": "Chemise élégante manches longues",
+    "stock": 45,
+    "boutiqueId": { "$oid": "697ae5ab6a59e6ebe21984d7" },
+    "image": "https://exemple.com/images/chemise-longue.jpg"
+  },
+  {
+    "nom": "Jogging Sport",
+    "prix": 25.00,
+    "description": "Pantalon jogging pour le sport",
+    "stock": 70,
+    "boutiqueId": { "$oid": "697ae5ab6a59e6ebe21984d7" },
+    "image": "https://exemple.com/images/jogging.jpg"
+  },
+  {
+    "nom": "Pull en Laine",
+    "prix": 45.50,
+    "description": "Pull en laine pour l’hiver",
+    "stock": 30,
+    "boutiqueId": { "$oid": "697ae5ab6a59e6ebe21984d7" },
+    "image": "https://exemple.com/images/pull-laine.jpg"
+  },
+  {
+    "nom": "Casquette Streetwear",
+    "prix": 15.00,
+    "description": "Casquette style streetwear",
+    "stock": 90,
+    "boutiqueId": { "$oid": "697ae5ab6a59e6ebe21984d7" },
+    "image": "https://exemple.com/images/casquette.jpg"
+  },
+  {
+    "nom": "Chaussures Baskets",
+    "prix": 65.99,
+    "description": "Baskets confortables pour la ville",
+    "stock": 40,
+    "boutiqueId": { "$oid": "697ae5ab6a59e6ebe21984d7" },
+    "image": "https://exemple.com/images/baskets.jpg"
+  }
+]

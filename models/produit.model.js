@@ -6,7 +6,10 @@ const produitSchema = new mongoose.Schema({
   description : String,
   stock : {type : Number, default: 0},
   boutiqueId : {type : mongoose.Schema.ObjectId, ref : 'Boutique', required : true},
-  image : String,
+  images: {
+    type: [String],
+    default: []
+  }
 },{timestamps : true});
 
 export default mongoose.model('Produit', produitSchema);
