@@ -1,21 +1,32 @@
 import Produit from '../models/produit.model.js';
+import { pagination } from "../utils/pagination.js";
 
 // Get /produits
 export const getAllProduits = async (req, res) => {
-    try {
-        const produits = await Produit.find();
-        res.json(produits);
-    } catch (error) {
-        error.status(500).json({message : error.message});
+  try {
+      const result = await pagination(
+        Produit,
+        {},
+        req
+      );
+  
+      res.json(result);
+    } catch (err) {
+      res.status(500).json({ message: err.message });
     }
-}
+};
+
 
 // GET /products/boutique/:boutiqueId
 export const getProductsByBoutique = async (req, res) => {
   try {
-    const { boutiqueId } = req.params;
-    const products = await Produit.find({ boutiqueId });
-    res.json(products);
+    const result = await pagination(
+        Produit,
+        { boutiqueId: req.params.boutiqueId },
+        req
+    );
+
+    res.json(result);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
