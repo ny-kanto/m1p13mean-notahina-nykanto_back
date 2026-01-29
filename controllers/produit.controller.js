@@ -47,9 +47,13 @@ export const findProduitById = async (req, res) => {
 // POST /produits
 export const createProduit = async (req, res) => {
     try {
+        console.log('📦 Body reçu:', req.body);
+        console.log('📸 Fichiers reçus:', req.files);  // ← AJOUTE CE LOG
+
         // Récupération des images (0 ou plusieurs)
         const images = req.files?.map(file => file.path) || [];
 
+        console.log('🔗 URLs Cloudinary:', images);  // ← AJOUTE CE LOG
         // Création du produit avec images
         const newProduit = new Produit({
             ...req.body,   // nom, prix, description, stock, boutiqueId
