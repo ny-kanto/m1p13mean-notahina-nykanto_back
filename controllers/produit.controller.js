@@ -9,7 +9,7 @@ export const getAllProduits = async (req, res) => {
         {},
         req
       );
-  
+
       res.json(result);
     } catch (err) {
       res.status(500).json({ message: err.message });
@@ -42,18 +42,6 @@ export const findProduitById = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 }
-
-// // Post /produits
-// export const createProduit = async (req, res) => {
-//     try {
-
-//         const newProduit = new Produit(req.body);
-//         await newProduit.save();
-//         res.status(201).json(newProduit);
-//     } catch (error) {
-//         res.status(500).json({ message: error.message });
-//     }
-// }
 
 // POST /produits
 export const createProduit = async (req, res) => {
