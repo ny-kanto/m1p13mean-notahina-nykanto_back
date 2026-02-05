@@ -4,12 +4,13 @@ import cors from "cors";
 import { connectDB } from "./config/db.js";
 import boutiqueRoutes from "./routes/boutique.routes.js";
 import produitRoutes from "./routes/produit.routes.js";
+import authRoutes from "./routes/auth.routes.js";
 
 dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: 'https://m1p13mean-notahina-nykanto-front.netlify.app',
+  origin: '*',
   credentials: true
 }));
 
@@ -25,6 +26,7 @@ connectDB(process.env.MONGODB_URI);
 // Routes
 app.use("/boutiques", boutiqueRoutes);
 app.use("/produits", produitRoutes);
+app.use("/auth", authRoutes);
 
 // Démarrer le serveur
 const PORT = process.env.PORT || 3000;

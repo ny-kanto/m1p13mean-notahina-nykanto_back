@@ -9,7 +9,6 @@ export const getAllBoutiques = async (req, res) => {
         //   {},
         //   req
         // );
-
         // res.json(result);
         // const boutiques = await Boutique.find();
         res.json(boutiques);
