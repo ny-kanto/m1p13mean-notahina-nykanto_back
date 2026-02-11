@@ -1,0 +1,80 @@
+[
+  {
+    "_id": {
+      "$oid": "6984f3866431e474dbe3ef0d"
+    },
+    "nom": "Mode & Accessoires"
+  },
+  {
+    "_id": {
+      "$oid": "6984f3866431e474dbe3ef0e"
+    },
+    "nom": "Beauté & Bien-être"
+  },
+  {
+    "_id": {
+      "$oid": "6984f3866431e474dbe3ef0f"
+    },
+    "nom": "High-tech & Multimédia"
+  },
+  {
+    "_id": {
+      "$oid": "6984f3866431e474dbe3ef10"
+    },
+    "nom": "Restauration & Alimentation"
+  },
+  {
+    "_id": {
+      "$oid": "6984f3866431e474dbe3ef11"
+    },
+    "nom": "Supermarché & Grandes surfaces"
+  },
+  {
+    "_id": {
+      "$oid": "6984f3866431e474dbe3ef12"
+    },
+    "nom": "Maison & Décoration"
+  },
+  {
+    "_id": {
+      "$oid": "6984f3866431e474dbe3ef13"
+    },
+    "nom": "Loisirs & Culture"
+  },
+  {
+    "_id": {
+      "$oid": "6984f3866431e474dbe3ef14"
+    },
+    "nom": "Enfants & Famille"
+  },
+  {
+    "_id": {
+      "$oid": "6984f3866431e474dbe3ef15"
+    },
+    "nom": "Sport & Fitness"
+  },
+  {
+    "_id": {
+      "$oid": "6984f3866431e474dbe3ef16"
+    },
+    "nom": "Santé & Services médicaux"
+  },
+  {
+    "_id": {
+      "$oid": "6984f3866431e474dbe3ef17"
+    },
+    "nom": "Services"
+  },
+  {
+    "_id": {
+      "$oid": "6984f3866431e474dbe3ef18"
+    },
+    "nom": "Auto & Mobilité"
+  },
+  {
+    "_id": {
+      "$oid": "6984f3866431e474dbe3ef19"
+    },
+    "nom": "Cadeaux & Concept stores"
+  }
+]

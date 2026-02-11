@@ -1,67 +1,125 @@
 /**
- * Fonction réutilisable pour gérer la pagination et le filtrage
+ * FONCTION UNIVERSELLE pour pagination + filtrage
+ * Fonctionne avec N'IMPORTE QUEL modèle (Produit, Client, Commande, etc.)
+ *
  * @param {Model} model - Le modèle Mongoose
  * @param {Object} baseFilter - Filtre de base (ex: { boutiqueId: '123' })
  * @param {Request} req - L'objet request Express
+ * @param {Object} config - Configuration des filtres (IMPORTANT !)
  * @returns {Promise<Object>} - Résultat paginé avec filtres appliqués
  */
-export const paginationAvecFiltre = async (model, baseFilter, req) => {
-    // PAGINATION
+export const paginationAvecFiltre = async (model, baseFilter, req, config = {}) => {
+    // ============================================
+    // 1. PAGINATION (universel)
+    // ============================================
     const page = Math.max(parseInt(req.query.page) || 1, 1);
     const limit = Math.min(parseInt(req.query.limit) || 10, 100);
     const skip = (page - 1) * limit;
 
-    // CONSTRUCTION DU FILTRE COMPLET
+    // ============================================
+    // 2. FILTRE DE BASE
+    // ============================================
     const filter = { ...baseFilter };
 
-    // Recherche par texte (nom du produit)
-    if (req.query.search && req.query.search.trim() !== '') {
-        filter.nom = { $regex: req.query.search.trim(), $options: 'i' };
-    }
+    // ============================================
+    // 3. RECHERCHE PAR TEXTE (configurable)
+    // ============================================
+    if (config.searchFields && req.query.search && req.query.search.trim() !== '') {
+        const searchTerm = req.query.search.trim();
 
-    // Filtre par prix (plage min-max)
-    if (req.query.minPrice || req.query.maxPrice) {
-        filter.prix = {};
-        if (req.query.minPrice) {
-            filter.prix.$gte = parseFloat(req.query.minPrice);
-        }
-        if (req.query.maxPrice) {
-            filter.prix.$lte = parseFloat(req.query.maxPrice);
-        }
-    }
-
-    // Filtre par état du stock
-    if (req.query.stockStatus && req.query.stockStatus !== 'all') {
-        switch (req.query.stockStatus) {
-            case 'empty':
-                filter.stock = 0;
-                break;
-            case 'low':
-                filter.stock = { $gt: 0, $lt: 10 };
-                break;
-            case 'ok':
-                filter.stock = { $gte: 10 };
-                break;
+        if (config.searchFields.length === 1) {
+            // Un seul champ de recherche
+            filter[config.searchFields[0]] = {
+                $regex: searchTerm,
+                $options: 'i'
+            };
+        } else {
+            // Plusieurs champs de recherche (OR)
+            filter.$or = config.searchFields.map(field => ({
+                [field]: { $regex: searchTerm, $options: 'i' }
+            }));
         }
     }
 
-    // CONSTRUCTION DU TRI
+    // ============================================
+    // 4. FILTRE PAR PLAGE NUMÉRIQUE (configurable)
+    // ============================================
+    if (config.rangeField) {
+        const minParam = `min${config.rangeField.charAt(0).toUpperCase() + config.rangeField.slice(1)}`;
+        const maxParam = `max${config.rangeField.charAt(0).toUpperCase() + config.rangeField.slice(1)}`;
+
+        if (req.query[minParam] || req.query[maxParam]) {
+            filter[config.rangeField] = {};
+            if (req.query[minParam]) {
+                filter[config.rangeField].$gte = parseFloat(req.query[minParam]);
+            }
+            if (req.query[maxParam]) {
+                filter[config.rangeField].$lte = parseFloat(req.query[maxParam]);
+            }
+        }
+    }
+
+    // ============================================
+    // 5. FILTRE PAR STATUS/ÉTAT (configurable)
+    // ============================================
+    if (config.statusField && config.statusRanges && req.query.status && req.query.status !== 'all') {
+        const statusConfig = config.statusRanges[req.query.status];
+
+        if (statusConfig !== undefined) {
+            if (typeof statusConfig === 'number') {
+                // Valeur exacte
+                filter[config.statusField] = statusConfig;
+            } else if (statusConfig.min !== undefined || statusConfig.max !== undefined) {
+                // Plage de valeurs
+                filter[config.statusField] = {};
+                if (statusConfig.min !== undefined) {
+                    filter[config.statusField].$gte = statusConfig.min;
+                }
+                if (statusConfig.max !== undefined) {
+                    filter[config.statusField].$lte = statusConfig.max;
+                }
+            } else if (typeof statusConfig === 'string') {
+                // Valeur string exacte
+                filter[config.statusField] = statusConfig;
+            }
+        }
+    }
+
+    // ============================================
+    // 6. FILTRES CUSTOM ADDITIONNELS (très flexible)
+    // ============================================
+    if (config.customFilters) {
+        Object.entries(config.customFilters).forEach(([queryParam, filterFunction]) => {
+            if (req.query[queryParam]) {
+                const customFilter = filterFunction(req.query[queryParam], req.query);
+                Object.assign(filter, customFilter);
+            }
+        });
+    }
+
+    // ============================================
+    // 7. TRI (universel)
+    // ============================================
     let sortOptions = {};
     if (req.query.sortBy) {
         const order = req.query.sortOrder === 'desc' ? -1 : 1;
         sortOptions[req.query.sortBy] = order;
     } else {
-        // Tri par défaut : plus récents d'abord
-        sortOptions = { createdAt: -1 };
+        // Tri par défaut
+        sortOptions = config.defaultSort || { createdAt: -1 };
     }
 
-    // EXÉCUTION DES REQUÊTES
+    // ============================================
+    // 8. EXÉCUTION (universel)
+    // ============================================
     const [data, total] = await Promise.all([
         model.find(filter).sort(sortOptions).skip(skip).limit(limit),
         model.countDocuments(filter)
     ]);
 
-    // RÉSULTATS
+    // ============================================
+    // 9. RÉSULTAT (universel)
+    // ============================================
     return {
         page,
         limit,
@@ -69,13 +127,30 @@ export const paginationAvecFiltre = async (model, baseFilter, req) => {
         data,
         totalPages: Math.ceil(total / limit),
         totalItems: total,
-        appliedFilters: {
-            search: req.query.search,
-            minPrice: req.query.minPrice,
-            maxPrice: req.query.maxPrice,
-            stockStatus: req.query.stockStatus,
-            sortBy: req.query.sortBy,
-            sortOrder: req.query.sortOrder
-        }
+        appliedFilters: req.query
+    };
+};
+
+
+/**
+ * FONCTION SIMPLE (juste pagination, sans filtres)
+ */
+export const pagination = async (model, filter, req) => {
+    const page = Math.max(parseInt(req.query.page) || 1, 1);
+    const limit = Math.min(parseInt(req.query.limit) || 10, 100);
+    const skip = (page - 1) * limit;
+
+    const [data, total] = await Promise.all([
+        model.find(filter).skip(skip).limit(limit),
+        model.countDocuments(filter)
+    ]);
+
+    return {
+        page,
+        limit,
+        skip,
+        data,
+        totalPages: Math.ceil(total / limit),
+        totalItems: total
     };
 };
