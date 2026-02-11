@@ -26,6 +26,7 @@ connectDB(process.env.MONGODB_URI);
 // Routes
 app.use("/boutiques", boutiqueRoutes);
 app.use("/produits", produitRoutes);
+app.use("/categories", categorieRoutes);
 app.use("/auth", authRoutes);
 
 // Démarrer le serveur
