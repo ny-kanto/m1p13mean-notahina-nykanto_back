@@ -4,7 +4,9 @@ import cors from "cors";
 import { connectDB } from "./config/db.js";
 import boutiqueRoutes from "./routes/boutique.routes.js";
 import produitRoutes from "./routes/produit.routes.js";
+import categorieRoutes from "./routes/categorie.routes.js";
 import authRoutes from "./routes/auth.routes.js";
+import favorisRoutes from "./routes/favoris.routes.js";
 
 dotenv.config();
 const app = express();
@@ -28,6 +30,7 @@ app.use("/boutiques", boutiqueRoutes);
 app.use("/produits", produitRoutes);
 app.use("/categories", categorieRoutes);
 app.use("/auth", authRoutes);
+app.use("/favoris", favorisRoutes);
 
 // Démarrer le serveur
 const PORT = process.env.PORT || 3000;

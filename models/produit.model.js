@@ -1,15 +1,40 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-const produitSchema = new mongoose.Schema({
-  nom: {type : String, required : true},
-  prix : {type : Number, required : true},
-  description : String,
-  stock : {type : Number, default: 0},
-  boutiqueId : {type : mongoose.Schema.ObjectId, ref : 'Boutique', required : true},
-  images: {
-    type: [String],
-    default: []
-  }
-},{timestamps : true});
+const produitSchema = new mongoose.Schema(
+    {
+        nom: { type: String, required: true, trim: true },
 
-export default mongoose.model('Produit', produitSchema);
+        boutique: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Boutique",
+            required: true,
+            index: true,
+        },
+
+        categorie: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Categorie",
+            required: false,
+            index: true,
+        },
+
+        description: { type: String, default: "" },
+        prix: { type: Number, default: 0 },
+
+        images: [
+            {
+                url: { type: String, default: "" },
+                public_id: { type: String, default: "" },
+            },
+        ],
+
+        // ✅ Agrégats (avis sur le PRODUIT)
+        noteMoyenne: { type: Number, default: 0 },
+        noteCompte: { type: Number, default: 0 },
+
+        created_at: { type: Date, default: Date.now },
+    },
+    { timestamps: false }
+);
+
+export default mongoose.model("Produit", produitSchema);

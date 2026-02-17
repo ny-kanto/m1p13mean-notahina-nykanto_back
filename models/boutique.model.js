@@ -48,6 +48,8 @@ const boutiqueSchema = new mongoose.Schema({
         public_id: String
     },
 
+    noteMoyenne: { type: Number, default: 0 }, // ex: 4.2
+    noteCompte: { type: Number, default: 0 },   // ex: 128
 
     created_at: {
         type: Date,
