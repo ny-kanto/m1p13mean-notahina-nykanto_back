@@ -15,6 +15,21 @@ export const getAllBoutiques = async (req, res) => {
 };
 
 
+// // GET /boutique/:etage
+// export const getBoutiqueByEtage = async (req, res) => {
+//   try {
+//     const result = await pagination(
+//         Boutique,
+//         { etage: req.params.etage },
+//         req
+//     );
+
+//     res.json(result);
+//   } catch (err) {
+//     res.status(500).json({ message: err.message });
+//   }
+// };
+
 export const getBoutiqueById = async (req, res) => {
     try {
         const result = await boutiqueService.getBoutiqueById(req.params.id);

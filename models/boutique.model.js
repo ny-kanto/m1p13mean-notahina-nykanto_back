@@ -1,6 +1,8 @@
 // models/Boutique.js
 import mongoose from "mongoose";
 
+import "./categorie.model.js";
+
 const horaireJourSchema = new mongoose.Schema(
     {
         ouverture: { type: String }, // ex: "09:00"
@@ -11,6 +13,21 @@ const horaireJourSchema = new mongoose.Schema(
 );
 
 const boutiqueSchema = new mongoose.Schema({
+
+//   nom: String,
+//   categorie: String,
+//   etage: Number,
+//   contact: {
+//     email: String,
+//     tel: String
+//   },
+//   horaires: {
+//     ouverture: String,
+//     fermeture: String
+//   },
+//   statut: String,
+//   created_at: String
+
     nom: {
         type: String,
         required: true,

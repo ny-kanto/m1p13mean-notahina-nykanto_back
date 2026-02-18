@@ -6,7 +6,10 @@ import boutiqueRoutes from "./routes/boutique.routes.js";
 import produitRoutes from "./routes/produit.routes.js";
 import categorieRoutes from "./routes/categorie.routes.js";
 import authRoutes from "./routes/auth.routes.js";
+import zoneRoutes from "./routes/zone.routes.js";
 import favorisRoutes from "./routes/favoris.routes.js";
+
+console.log("🚀 Serveur démarré");
 
 dotenv.config();
 const app = express();
@@ -30,6 +33,7 @@ app.use("/boutiques", boutiqueRoutes);
 app.use("/produits", produitRoutes);
 app.use("/categories", categorieRoutes);
 app.use("/auth", authRoutes);
+app.use("/zones", zoneRoutes);
 app.use("/favoris", favorisRoutes);
 
 // Démarrer le serveur
