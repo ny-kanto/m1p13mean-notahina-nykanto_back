@@ -1,59 +1,120 @@
-import Boutique from "../models/boutique.model.js";
-import { pagination } from "../utils/pagination.js";
+import boutiqueService from '../services/boutique.service.js';
+import Boutique from '../models/boutique.model.js';
 
 
 export const getAllBoutiques = async (req, res) => {
-  try {
-    const result = await pagination(
-      Boutique,
-      {},
-      req
-    );
-
-    res.json(result);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
+    try {
+        const result = await boutiqueService.getAllBoutiques(req.query);
+        res.status(200).json(result);
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+    }
 };
 
-// GET /boutique/:etage
-export const getBoutiqueByEtage = async (req, res) => {
-  try {
-    const result = await pagination(
-        Boutique,
-        { etage: req.params.etage },
-        req
-    );
 
-    res.json(result);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
+// // GET /boutique/:etage
+// export const getBoutiqueByEtage = async (req, res) => {
+//   try {
+//     const result = await pagination(
+//         Boutique,
+//         { etage: req.params.etage },
+//         req
+//     );
+
+//     res.json(result);
+//   } catch (err) {
+//     res.status(500).json({ message: err.message });
+//   }
+// };
+
+export const getBoutiqueById = async (req, res) => {
+    try {
+        const result = await boutiqueService.getBoutiqueById(req.params.id);
+        res.status(200).json(result);
+    } catch (error) {
+        res.status(404).json({
+            success: false,
+            message: error.message
+        });
+    }
 };
+
 
 export const createBoutique = async (req, res) => {
+    try {
+        const image = req.file
+            ? {
+                url: req.file.path,
+                public_id: req.file.filename
+            }
+            : null;
 
-  const { nom, categorie, contact, horaires } = req.body;
+        const result = await boutiqueService.createBoutique({
+            ...req.body,
+            image
+        });
 
-  // 1️⃣ Création de la boutique en PENDING
-  const boutique = await Boutique.create({
-    nom,
-    categorie,
-    contact,
-    horaires,
-    status: "PENDING",
-  });
+        res.status(201).json(result);
+    } catch (error) {
+        res.status(400).json({ success: false, message: error.message });
+    }
+};
 
-  // 2️⃣ Suspendre le compte utilisateur jusqu'à validation
-  const user = await User.findById(userId);
-  user.status = "PENDING";
-  user.boutiqueId = boutique._id;
-  await user.save();
 
-  res.status(201).json({
-    message:
-      "Demande de boutique enregistrée, votre compte est en attente de validation",
-    boutiqueId: boutique._id
-  });
+export const updateBoutique = async (req, res) => {
+    try {
 
-}
+        console.log("BODY:", req.body);
+        console.log("FILE:", req.file);
+
+
+        const result = await boutiqueService.updateBoutique(
+            req.params.id,
+            req.body,
+            req.file
+        );
+        res.status(200).json(result);
+    } catch (error) {
+        res.status(400).json({ success: false, message: error.message });
+    }
+};
+
+
+export const deleteBoutique = async (req, res) => {
+    try {
+        const result = await boutiqueService.deleteBoutique(req.params.id);
+        res.json(result);
+    } catch (error) {
+        res.status(400).json({ success: false, message: error.message });
+    }
+};
+
+
+
+export const getStatistics = async (req, res) => {
+    try {
+        const result = await boutiqueService.getStatistics();
+        res.status(200).json(result);
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+    }
+};
+
+
+export const searchBoutiques = async (req, res) => {
+    try {
+        const result = await boutiqueService.searchBoutiques(req.body);
+        res.status(200).json(result);
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+    }
+};

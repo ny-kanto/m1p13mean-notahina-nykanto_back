@@ -1,152 +1,538 @@
-[
-  {
-    "nom": "Zara",
-    "categorie": "Mode",
-    "etage": 1,
-    "contact": {
-      "email": "contact@zara.mg",
-      "tel": "034 11 222 33"
-    },
-    "horaires": {
+[{
+  "_id": {
+    "$oid": "6984f4926431e474dbe3ef21"
+  },
+  "nom": "Zara",
+  "categorie": {
+    "$oid": "6984f3866431e474dbe3ef0d"
+  },
+  "etage": 1,
+  "contact": {
+    "email": "contact@zara.mg",
+    "tel": "034 11 222 33"
+  },
+  "horaires": {
+    "lundi": {
       "ouverture": "09:00",
-      "fermeture": "20:00"
+      "fermeture": "20:00",
+      "ferme": false
     },
-    "statut": "Ouvert",
-    "created_at": "2024-01-27"
-  },
-  {
-    "nom": "Jumbo Score",
-    "categorie": "Alimentation",
-    "etage": 0,
-    "contact": {
-      "email": "info@jumbo.mg",
-      "tel": "032 44 555 66"
-    },
-    "horaires": {
-      "ouverture": "08:30",
-      "fermeture": "21:00"
-    },
-    "statut": "Ouvert",
-    "created_at": "2024-01-27"
-  },
-  {
-    "nom": "Samsung Experience",
-    "categorie": "Technologie",
-    "etage": 2,
-    "contact": {
-      "email": "support@samsung-mg.com",
-      "tel": "033 77 888 99"
-    },
-    "horaires": {
-      "ouverture": "10:00",
-      "fermeture": "19:00"
-    },
-    "statut": "Ouvert",
-    "created_at": "2024-01-27"
-  },
-  {
-    "nom": "Beauty Success",
-    "categorie": "Cosmétique",
-    "etage": 1,
-    "contact": {
-      "email": "beauty@success.mg",
-      "tel": "034 00 111 22"
-    },
-    "horaires": {
+    "mardi": {
       "ouverture": "09:00",
-      "fermeture": "19:30"
+      "fermeture": "20:00",
+      "ferme": false
     },
-    "statut": "Fermé",
-    "created_at": "2024-01-27"
-  },
-  {
-    "nom": "Courir",
-    "categorie": "Sport",
-    "etage": 2,
-    "contact": {
-      "email": "shop@courir.mg",
-      "tel": "032 99 888 77"
-    },
-    "horaires": {
+    "mercredi": {
       "ouverture": "09:00",
-      "fermeture": "20:00"
+      "fermeture": "20:00",
+      "ferme": false
     },
-    "statut": "Ouvert",
-    "created_at": "2024-01-27"
-  },
-  {
-    "nom": "La City Food Court",
-    "categorie": "Restauration",
-    "etage": 3,
-    "contact": {
-      "email": "food@lacity.mg",
-      "tel": "033 22 333 44"
-    },
-    "horaires": {
-      "ouverture": "11:00",
-      "fermeture": "23:00"
-    },
-    "statut": "Ouvert",
-    "created_at": "2024-01-27"
-  },
-  {
-    "nom": "Home & Cook",
-    "categorie": "Maison",
-    "etage": 0,
-    "contact": {
-      "email": "home@cook.mg",
-      "tel": "034 55 444 33"
-    },
-    "horaires": {
+    "jeudi": {
       "ouverture": "09:00",
-      "fermeture": "18:30"
+      "fermeture": "20:00",
+      "ferme": false
     },
-    "statut": "Fermé",
-    "created_at": "2024-01-27"
-  },
-  {
-    "nom": "Optical Center",
-    "categorie": "Santé",
-    "etage": 1,
-    "contact": {
-      "email": "optic@center.mg",
-      "tel": "032 11 000 99"
-    },
-    "horaires": {
-      "ouverture": "08:30",
-      "fermeture": "18:00"
-    },
-    "statut": "Ouvert",
-    "created_at": "2024-01-27"
-  },
-  {
-    "nom": "Librairie Mix",
-    "categorie": "Loisirs",
-    "etage": 2,
-    "contact": {
-      "email": "contact@mix.mg",
-      "tel": "033 44 555 11"
-    },
-    "horaires": {
+    "vendredi": {
       "ouverture": "09:00",
-      "fermeture": "19:00"
+      "fermeture": "20:00",
+      "ferme": false
     },
-    "statut": "Ouvert",
-    "created_at": "2024-01-27"
+    "samedi": {
+      "ouverture": "09:00",
+      "fermeture": "20:00",
+      "ferme": false
+    },
+    "dimanche": {
+      "ferme": true
+    }
   },
-  {
-    "nom": "Orange Madagascar",
-    "categorie": "Télécom",
-    "etage": 1,
-    "contact": {
-      "email": "service.client@orange.mg",
-      "tel": "032 00 123 45"
-    },
-    "horaires": {
-      "ouverture": "08:30",
-      "fermeture": "19:00"
-    },
-    "statut": "Ouvert",
-    "created_at": "2024-01-27"
+  "created_at": "2024-01-27",
+  "image": {
+    "url": "https://res.cloudinary.com/dgixoky7a/image/upload/v1770828010/produits/x7ayigwqec4efm02mudc.jpg",
+    "public_id": "produits/x7ayigwqec4efm02mudc"
   }
-]
+},
+{
+  "_id": {
+    "$oid": "6984f4926431e474dbe3ef22"
+  },
+  "nom": "Jumbo Score",
+  "categorie": {
+    "$oid": "6984f3866431e474dbe3ef10"
+  },
+  "etage": 0,
+  "contact": {
+    "email": "info@jumbo.mg",
+    "tel": "032 44 555 66"
+  },
+  "horaires": {
+    "lundi": {
+      "ouverture": "08:30",
+      "fermeture": "21:00",
+      "ferme": false
+    },
+    "mardi": {
+      "ouverture": "08:30",
+      "fermeture": "21:00",
+      "ferme": false
+    },
+    "mercredi": {
+      "ouverture": "08:30",
+      "fermeture": "21:00",
+      "ferme": false
+    },
+    "jeudi": {
+      "ouverture": "08:30",
+      "fermeture": "21:00",
+      "ferme": false
+    },
+    "vendredi": {
+      "ouverture": "08:30",
+      "fermeture": "21:00",
+      "ferme": false
+    },
+    "samedi": {
+      "ouverture": "08:30",
+      "fermeture": "21:00",
+      "ferme": false
+    },
+    "dimanche": {
+      "ferme": true
+    }
+  },
+  "created_at": "2024-01-27",
+  "image": {
+    "url": "https://res.cloudinary.com/dgixoky7a/image/upload/v1770827998/produits/bgjepts54mu088h1lpym.jpg",
+    "public_id": "produits/bgjepts54mu088h1lpym"
+  }
+},
+{
+  "_id": {
+    "$oid": "6984f4926431e474dbe3ef23"
+  },
+  "nom": "Samsung Experience",
+  "categorie": {
+    "$oid": "6984f3866431e474dbe3ef0f"
+  },
+  "etage": 2,
+  "contact": {
+    "email": "support@samsung-mg.com",
+    "tel": "033 77 888 99"
+  },
+  "horaires": {
+    "lundi": {
+      "ouverture": "10:00",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "mardi": {
+      "ouverture": "10:00",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "mercredi": {
+      "ouverture": "10:00",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "jeudi": {
+      "ouverture": "10:00",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "vendredi": {
+      "ouverture": "10:00",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "samedi": {
+      "ouverture": "10:00",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "dimanche": {
+      "ferme": true
+    }
+  },
+  "created_at": "2024-01-27",
+  "image": {
+    "url": "https://res.cloudinary.com/dgixoky7a/image/upload/v1770827986/produits/nfdbct4k0wlkuavheqbx.jpg",
+    "public_id": "produits/nfdbct4k0wlkuavheqbx"
+  }
+},
+{
+  "_id": {
+    "$oid": "6984f4926431e474dbe3ef24"
+  },
+  "nom": "Beauty Success",
+  "categorie": {
+    "$oid": "6984f3866431e474dbe3ef0e"
+  },
+  "etage": 1,
+  "contact": {
+    "email": "beauty@success.mg",
+    "tel": "034 00 111 22"
+  },
+  "horaires": {
+    "lundi": {
+      "ouverture": "09:00",
+      "fermeture": "19:30",
+      "ferme": false
+    },
+    "mardi": {
+      "ouverture": "09:00",
+      "fermeture": "19:30",
+      "ferme": false
+    },
+    "mercredi": {
+      "ouverture": "09:00",
+      "fermeture": "19:30",
+      "ferme": false
+    },
+    "jeudi": {
+      "ouverture": "09:00",
+      "fermeture": "19:30",
+      "ferme": false
+    },
+    "vendredi": {
+      "ouverture": "09:00",
+      "fermeture": "19:30",
+      "ferme": false
+    },
+    "samedi": {
+      "ouverture": "09:00",
+      "fermeture": "19:30",
+      "ferme": false
+    },
+    "dimanche": {
+      "ferme": true
+    }
+  },
+  "created_at": "2024-01-27",
+  "image": {
+    "url": "https://res.cloudinary.com/dgixoky7a/image/upload/v1770827974/produits/dmhpv6l7kakvy5fw1zer.jpg",
+    "public_id": "produits/dmhpv6l7kakvy5fw1zer"
+  }
+},
+{
+  "_id": {
+    "$oid": "6984f4926431e474dbe3ef25"
+  },
+  "nom": "Courir",
+  "categorie": {
+    "$oid": "6984f3866431e474dbe3ef15"
+  },
+  "etage": 2,
+  "contact": {
+    "email": "shop@courir.mg",
+    "tel": "032 99 888 77"
+  },
+  "horaires": {
+    "lundi": {
+      "ouverture": "09:00",
+      "fermeture": "20:00",
+      "ferme": false
+    },
+    "mardi": {
+      "ouverture": "09:00",
+      "fermeture": "20:00",
+      "ferme": false
+    },
+    "mercredi": {
+      "ouverture": "09:00",
+      "fermeture": "20:00",
+      "ferme": false
+    },
+    "jeudi": {
+      "ouverture": "09:00",
+      "fermeture": "20:00",
+      "ferme": false
+    },
+    "vendredi": {
+      "ouverture": "09:00",
+      "fermeture": "20:00",
+      "ferme": false
+    },
+    "samedi": {
+      "ferme": true
+    },
+    "dimanche": {
+      "ferme": true
+    }
+  },
+  "created_at": "2024-01-27",
+  "image": {
+    "url": "https://res.cloudinary.com/dgixoky7a/image/upload/v1770827958/produits/kpdv1dk4fua2uvqyhled.jpg",
+    "public_id": "produits/kpdv1dk4fua2uvqyhled"
+  }
+},
+{
+  "_id": {
+    "$oid": "6984f4926431e474dbe3ef26"
+  },
+  "nom": "La City Food Court",
+  "categorie": {
+    "$oid": "6984f3866431e474dbe3ef10"
+  },
+  "etage": 3,
+  "contact": {
+    "email": "food@lacity.mg",
+    "tel": "033 22 333 44"
+  },
+  "horaires": {
+    "lundi": {
+      "ouverture": "11:00",
+      "fermeture": "23:00",
+      "ferme": false
+    },
+    "mardi": {
+      "ouverture": "11:00",
+      "fermeture": "23:00",
+      "ferme": false
+    },
+    "mercredi": {
+      "ouverture": "11:00",
+      "fermeture": "23:00",
+      "ferme": false
+    },
+    "jeudi": {
+      "ouverture": "11:00",
+      "fermeture": "23:00",
+      "ferme": false
+    },
+    "vendredi": {
+      "ouverture": "11:00",
+      "fermeture": "23:00",
+      "ferme": false
+    },
+    "samedi": {
+      "ouverture": "11:00",
+      "fermeture": "23:00",
+      "ferme": false
+    },
+    "dimanche": {
+      "ferme": true
+    }
+  },
+  "created_at": "2024-01-27",
+  "image": {
+    "url": "https://res.cloudinary.com/dgixoky7a/image/upload/v1770827910/produits/pxfippw67lsk8p0rsvgr.jpg",
+    "public_id": "produits/pxfippw67lsk8p0rsvgr"
+  }
+},
+{
+  "_id": {
+    "$oid": "6984f4926431e474dbe3ef27"
+  },
+  "nom": "Home & Cook",
+  "categorie": {
+    "$oid": "6984f3866431e474dbe3ef12"
+  },
+  "etage": 0,
+  "contact": {
+    "email": "home@cook.mg",
+    "tel": "034 55 444 33"
+  },
+  "horaires": {
+    "lundi": {
+      "ouverture": "09:00",
+      "fermeture": "18:30",
+      "ferme": false
+    },
+    "mardi": {
+      "ouverture": "09:00",
+      "fermeture": "18:30",
+      "ferme": false
+    },
+    "mercredi": {
+      "ouverture": "09:00",
+      "fermeture": "18:30",
+      "ferme": false
+    },
+    "jeudi": {
+      "ouverture": "09:00",
+      "fermeture": "18:30",
+      "ferme": false
+    },
+    "vendredi": {
+      "ouverture": "09:00",
+      "fermeture": "18:30",
+      "ferme": false
+    },
+    "samedi": {
+      "ouverture": "09:00",
+      "fermeture": "18:30",
+      "ferme": false
+    },
+    "dimanche": {
+      "ferme": true
+    }
+  },
+  "created_at": "2024-01-27",
+  "image": {
+    "url": "https://res.cloudinary.com/dgixoky7a/image/upload/v1770827889/produits/wwn1nqwei0mxfqbg6ws2.jpg",
+    "public_id": "produits/wwn1nqwei0mxfqbg6ws2"
+  }
+},
+{
+  "_id": {
+    "$oid": "6984f4926431e474dbe3ef28"
+  },
+  "nom": "Optical Center",
+  "categorie": {
+    "$oid": "6984f3866431e474dbe3ef16"
+  },
+  "etage": 1,
+  "contact": {
+    "email": "optic@center.mg",
+    "tel": "032 11 000 99"
+  },
+  "horaires": {
+    "lundi": {
+      "ouverture": "08:30",
+      "fermeture": "18:00",
+      "ferme": false
+    },
+    "mardi": {
+      "ouverture": "08:30",
+      "fermeture": "18:00",
+      "ferme": false
+    },
+    "mercredi": {
+      "ouverture": "08:30",
+      "fermeture": "18:00",
+      "ferme": false
+    },
+    "jeudi": {
+      "ouverture": "08:30",
+      "fermeture": "18:00",
+      "ferme": false
+    },
+    "vendredi": {
+      "ouverture": "08:30",
+      "fermeture": "18:00",
+      "ferme": false
+    },
+    "samedi": {
+      "ouverture": "08:30",
+      "fermeture": "18:00",
+      "ferme": false
+    },
+    "dimanche": {
+      "ferme": true
+    }
+  },
+  "created_at": "2024-01-27",
+  "image": {
+    "url": "https://res.cloudinary.com/dgixoky7a/image/upload/v1770827878/produits/hksxay018ic88zqtfmzd.jpg",
+    "public_id": "produits/hksxay018ic88zqtfmzd"
+  }
+},
+{
+  "_id": {
+    "$oid": "6984f4926431e474dbe3ef29"
+  },
+  "nom": "Librairie Mix",
+  "categorie": {
+    "$oid": "6984f3866431e474dbe3ef13"
+  },
+  "etage": 2,
+  "contact": {
+    "email": "contact@mix.mg",
+    "tel": "033 44 555 11"
+  },
+  "horaires": {
+    "lundi": {
+      "ouverture": "09:00",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "mardi": {
+      "ouverture": "09:00",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "mercredi": {
+      "ouverture": "09:00",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "jeudi": {
+      "ouverture": "09:00",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "vendredi": {
+      "ouverture": "09:00",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "samedi": {
+      "ouverture": "09:00",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "dimanche": {
+      "ferme": true
+    }
+  },
+  "created_at": "2024-01-27",
+  "image": {
+    "url": "https://res.cloudinary.com/dgixoky7a/image/upload/v1770827866/produits/szq1excx7qxgy2q85czt.jpg",
+    "public_id": "produits/szq1excx7qxgy2q85czt"
+  }
+},
+{
+  "_id": {
+    "$oid": "6984f4926431e474dbe3ef2a"
+  },
+  "nom": "Orange Madagascar",
+  "categorie": {
+    "$oid": "6984f3866431e474dbe3ef17"
+  },
+  "etage": 1,
+  "contact": {
+    "email": "service.client@orange.mg",
+    "tel": "032 00 123 45"
+  },
+  "horaires": {
+    "lundi": {
+      "ouverture": "08:30",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "mardi": {
+      "ouverture": "08:30",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "mercredi": {
+      "ouverture": "08:30",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "jeudi": {
+      "ouverture": "08:30",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "vendredi": {
+      "ouverture": "08:30",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "samedi": {
+      "ouverture": "08:30",
+      "fermeture": "19:00",
+      "ferme": false
+    },
+    "dimanche": {
+      "ferme": true
+    }
+  },
+  "created_at": "2024-01-27",
+  "image": {
+    "url": "https://res.cloudinary.com/dgixoky7a/image/upload/v1770827851/produits/lqngvj1mwtes178mfdga.jpg",
+    "public_id": "produits/lqngvj1mwtes178mfdga"
+  }
+}]
