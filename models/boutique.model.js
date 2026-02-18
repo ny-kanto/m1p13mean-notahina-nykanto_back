@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 const boutiqueSchema = new mongoose.Schema({
   nom: String,
   categorie: String,
+  etage: Number,
   contact: {
     email: String,
     tel: String

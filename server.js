@@ -5,6 +5,9 @@ import { connectDB } from "./config/db.js";
 import boutiqueRoutes from "./routes/boutique.routes.js";
 import produitRoutes from "./routes/produit.routes.js";
 import authRoutes from "./routes/auth.routes.js";
+import zoneRoutes from "./routes/zone.routes.js";
+
+console.log("🚀 Serveur démarré");
 
 dotenv.config();
 const app = express();
@@ -27,6 +30,7 @@ connectDB(process.env.MONGODB_URI);
 app.use("/boutiques", boutiqueRoutes);
 app.use("/produits", produitRoutes);
 app.use("/auth", authRoutes);
+app.use("/zones", zoneRoutes);
 
 // Démarrer le serveur
 const PORT = process.env.PORT || 3000;
