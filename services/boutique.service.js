@@ -1,6 +1,7 @@
 // services/boutique.service.js
 import Boutique from "../models/boutique.model.js";
 import cloudinary from "../config/cloudinary.js";
+import User from "../models/user.model.js";
 
 class BoutiqueService {
 
@@ -80,13 +81,27 @@ class BoutiqueService {
  * @param {Object} queryParams - Paramètres de requête
  * @returns {Promise<Object>} Résultat avec données et pagination
  */
-    async getAllBoutiques(queryParams) {
+    async getAllBoutiques(queryParams, userId) {
         try {
             const page = Math.max(1, parseInt(queryParams.page) || 1);
             const limit = Math.min(100, Math.max(1, parseInt(queryParams.limit) || 12));
             const skip = (page - 1) * limit;
 
             const filter = this.buildFilters(queryParams);
+
+            console.log("FAVORIS : ", queryParams.favoris);
+
+            if (queryParams.favoris === "true") {
+                if (!userId) throw new Error("Auth requise pour favoris");
+
+                console.log("TONGA USER");
+
+                const user = await User.findById(userId).select("favorisBoutiques").lean();
+                if (!user) throw new Error("User introuvable");
+
+                filter._id = { $in: user.favorisBoutiques || [] };
+            }
+
             const sortOptions = this.buildSortOptions(
                 queryParams.sortBy,
                 queryParams.order
@@ -102,7 +117,6 @@ class BoutiqueService {
                 Boutique.countDocuments(filter)
             ]);
 
-            // Ajouter ouvertMaintenant
             let data = boutiques.map(b => ({
                 ...b,
                 ouvertMaintenant: Boutique.isOpenNow(b)
@@ -127,7 +141,8 @@ class BoutiqueService {
                     search: queryParams.search || "",
                     categorie: queryParams.categorie || "",
                     etage: queryParams.etage || "",
-                    ouvert: queryParams.ouvert || ""
+                    ouvert: queryParams.ouvert || "",
+                    favoris: queryParams.favoris || "",
                 }
             };
 

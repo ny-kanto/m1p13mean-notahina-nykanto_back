@@ -12,6 +12,7 @@ import {
     getStatistics,
     searchBoutiques
 } from '../controllers/boutique.controller.js';
+import authOptional from '../middlewares/authOptional.js';
 
 const router = express.Router();
 
@@ -20,7 +21,7 @@ const router = express.Router();
  * Base URL : /boutiques
  */
 
-router.get('/', getAllBoutiques);
+router.get('/', authOptional, getAllBoutiques);
 
 // router.get('/statistics', getStatistics);
 
