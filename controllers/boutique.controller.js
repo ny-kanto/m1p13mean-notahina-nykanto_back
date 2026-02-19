@@ -4,7 +4,8 @@ import Boutique from '../models/boutique.model.js';
 
 export const getAllBoutiques = async (req, res) => {
     try {
-        const result = await boutiqueService.getAllBoutiques(req.query);
+        const userId = req.user?.userId;
+        const result = await boutiqueService.getAllBoutiques(req.query, userId);
         res.status(200).json(result);
     } catch (error) {
         res.status(500).json({

@@ -1,4 +1,3 @@
-// controllers/favoris.controller.js
 import mongoose from "mongoose";
 import User from "../models/user.model.js";
 import Boutique from "../models/boutique.model.js";
