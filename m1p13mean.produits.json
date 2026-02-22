@@ -178,26 +178,6 @@
 },
 {
   "_id": {
-    "$oid": "6999aa3d2621f8eeaa70f2bb"
-  },
-  "nom": "Fond de teint longue tenue",
-  "boutique": {
-    "$oid": "6984f4926431e474dbe3ef24"
-  },
-  "description": "Fond de teint couvrance naturelle 24h.",
-  "prix": 95000,
-  "images": [
-    {
-      "url": "https://images.unsplash.com/photo-1586495777744-4413f21062fa",
-      "public_id": "beauty_fondteint"
-    }
-  ],
-  "noteMoyenne": 4.6,
-  "noteCompte": 14,
-  "created_at": "2024-01-27T00:00:00.000Z"
-},
-{
-  "_id": {
     "$oid": "6999aa3d2621f8eeaa70f2bc"
   },
   "nom": "Parfum Floral Élégance",
