@@ -1,314 +1,338 @@
-[
-  {
-    "nom": "Robe d'été florale",
-    "boutique": { "$oid": "6984f4926431e474dbe3ef21"},
-    "description": "Robe légère parfaite pour l'été avec imprimé floral.",
-    "prix": 120000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1496747611176-843222e1e57c",
-        "public_id": "zara_robe_1"
-      }
-    ],
-    "noteMoyenne": 4.5,
-    "noteCompte": 12,
-    "created_at": "2024-01-27T00:00:00.000Z"
+[{
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2b2"
   },
-  {
-    "nom": "Veste en jean",
-    "boutique": { "$oid": "6984f4926431e474dbe3ef21"},
-    "description": "Veste en denim tendance pour homme et femme.",
-    "prix": 185000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246",
-        "public_id": "zara_veste_1"
-      }
-    ],
-    "noteMoyenne": 4.2,
-    "noteCompte": 8,
-    "created_at": "2024-01-27T00:00:00.000Z"
+  "nom": "Robe d'été florale",
+  "boutique": {
+    "$oid": "6984f4926431e474dbe3ef21"
   },
-
-
-
-
-
-
-  {
-    "nom": "Pack Eau Minérale 6x1.5L",
-    "boutique": { "$oid": "6984f4926431e474dbe3ef22"},
-    "description": "Pack économique d'eau minérale naturelle.",
-    "prix": 12000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1561047029-3000c68339ca",
-        "public_id": "jumbo_eau"
-      }
-    ],
-    "noteMoyenne": 4.2,
-    "noteCompte": 18,
-    "created_at": "2024-01-27T00:00:00.000Z"
-  },
-  {
-    "nom": "Riz Blanc 5kg",
-    "boutique": { "$oid": "6984f4926431e474dbe3ef22"},
-    "description": "Riz blanc de qualité supérieure.",
-    "prix": 25000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1586201375761-83865001e31c",
-        "public_id": "jumbo_riz"
-      }
-    ],
-    "noteMoyenne": 4.5,
-    "noteCompte": 30,
-    "created_at": "2024-01-27T00:00:00.000Z"
-  },
-
-
-
-
-  {
-    "nom": "Samsung Galaxy S24",
-    "boutique": { "$oid": "6984f4926431e474dbe3ef23"},
-    "description": "Smartphone dernière génération avec écran AMOLED.",
-    "prix": 4200000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf",
-        "public_id": "samsung_s24"
-      }
-    ],
-    "noteMoyenne": 4.8,
-    "noteCompte": 34,
-    "created_at": "2024-01-27T00:00:00.000Z"
-  },
-  {
-    "nom": "Samsung Galaxy Buds Pro",
-    "boutique": { "$oid": "6984f4926431e474dbe3ef23"},
-    "description": "Écouteurs sans fil avec réduction de bruit active.",
-    "prix": 650000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1585386959984-a4155224a1ad",
-        "public_id": "samsung_buds"
-      }
-    ],
-    "noteMoyenne": 4.4,
-    "noteCompte": 19,
-    "created_at": "2024-01-27T00:00:00.000Z"
-  },
-
-
-
-
-
-
-  {
-    "nom": "Routeur 4G Orange",
-    "boutique": { "$oid": "6984f4926431e474dbe3ef2a"},
-    "description": "Routeur 4G haute vitesse pour maison et bureau.",
-    "prix": 250000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7",
-        "public_id": "orange_routeur"
-      }
-    ],
-    "noteMoyenne": 4.3,
-    "noteCompte": 11,
-    "created_at": "2024-01-27T00:00:00.000Z"
-  },
-
-
-
-
-
-
+  "description": "Robe légère parfaite pour l'été avec imprimé floral.",
+  "prix": 120000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1496747611176-843222e1e57c",
+      "public_id": "zara_robe_1"
+    }
+  ],
+  "noteMoyenne": 4.5,
+  "noteCompte": 12,
+  "created_at": "2024-01-27T00:00:00.000Z"
+},
 {
-    "nom": "Fond de teint longue tenue",
-    "boutique": { "$oid": "6984f4926431e474dbe3ef24"},
-    "description": "Fond de teint couvrance naturelle 24h.",
-    "prix": 95000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1586495777744-4413f21062fa",
-        "public_id": "beauty_fondteint"
-      }
-    ],
-    "noteMoyenne": 4.6,
-    "noteCompte": 14,
-    "created_at": "2024-01-27T00:00:00.000Z"
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2b3"
   },
-  {
-    "nom": "Parfum Floral Élégance",
-    "boutique": "6984f4926431e474dbe3ef24",
-    "description": "Parfum féminin aux notes florales raffinées.",
-    "prix": 180000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1594035910387-fea47794261f",
-        "public_id": "beauty_parfum"
-      }
-    ],
-    "noteMoyenne": 4.8,
-    "noteCompte": 21,
-    "created_at": "2024-01-27T00:00:00.000Z"
+  "nom": "Veste en jean",
+  "boutique": {
+    "$oid": "6984f4926431e474dbe3ef21"
   },
-
-
-
-
-
-
-
-  {
-    "nom": "Fond de teint longue tenue",
-    "boutique": { "$oid": "6984f4926431e474dbe3ef24"},
-    "description": "Fond de teint couvrance naturelle 24h.",
-    "prix": 95000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1586495777744-4413f21062fa",
-        "public_id": "beauty_fondteint"
-      }
-    ],
-    "noteMoyenne": 4.6,
-    "noteCompte": 14,
-    "created_at": "2024-01-27T00:00:00.000Z"
-  },
-  {
-    "nom": "Parfum Floral Élégance",
-    "boutique": { "$oid": "6984f4926431e474dbe3ef24"},
-    "description": "Parfum féminin aux notes florales raffinées.",
-    "prix": 180000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1594035910387-fea47794261f",
-        "public_id": "beauty_parfum"
-      }
-    ],
-    "noteMoyenne": 4.8,
-    "noteCompte": 21,
-    "created_at": "2024-01-27T00:00:00.000Z"
-  },
-
-
-
-
-
-
-
-
-
+  "description": "Veste en denim tendance pour homme et femme.",
+  "prix": 185000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246",
+      "public_id": "zara_veste_1"
+    }
+  ],
+  "noteMoyenne": 4.2,
+  "noteCompte": 8,
+  "created_at": "2024-01-27T00:00:00.000Z"
+},
 {
-    "nom": "Burger Gourmet",
-    "boutique": { "$oid": "6984f4926431e474dbe3ef26"},
-    "description": "Burger maison avec steak premium.",
-    "prix": 30000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1550547660-d9450f859349",
-        "public_id": "food_burger"
-      }
-    ],
-    "noteMoyenne": 4.6,
-    "noteCompte": 52,
-    "created_at": "2024-01-27T00:00:00.000Z"
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2b4"
   },
-  {
-    "nom": "Pizza Margherita",
-    "boutique": { "$oid": "6984f4926431e474dbe3ef26"},
-    "description": "Pizza traditionnelle sauce tomate et mozzarella.",
-    "prix": 45000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1548365328-5c7c3ac9a8e2",
-        "public_id": "food_pizza"
-      }
-    ],
-    "noteMoyenne": 4.4,
-    "noteCompte": 36,
-    "created_at": "2024-01-27T00:00:00.000Z"
+  "nom": "Pack Eau Minérale 6x1.5L",
+  "boutique": {
+    "$oid": "6984f4926431e474dbe3ef22"
   },
-
-
-
-
-
-
-
-  {
-    "nom": "Poêle antiadhésive 28cm",
-    "boutique": { "$oid": "6984f4926431e474dbe3ef27"},
-    "description": "Poêle durable avec revêtement antiadhésif.",
-    "prix": 80000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1586201375761-83865001e31c",
-        "public_id": "home_poele"
-      }
-    ],
-    "noteMoyenne": 4.3,
-    "noteCompte": 10,
-    "created_at": "2024-01-27T00:00:00.000Z"
+  "description": "Pack économique d'eau minérale naturelle.",
+  "prix": 12000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1561047029-3000c68339ca",
+      "public_id": "jumbo_eau"
+    }
+  ],
+  "noteMoyenne": 4.2,
+  "noteCompte": 18,
+  "created_at": "2024-01-27T00:00:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2b5"
   },
-  {
-    "nom": "Set Couteaux Cuisine Pro",
-    "boutique": { "$oid": "6984f4926431e474dbe3ef27"},
-    "description": "Ensemble de couteaux inox haute précision.",
-    "prix": 150000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1593618998160-e34014e67546",
-        "public_id": "home_couteaux"
-      }
-    ],
-    "noteMoyenne": 4.6,
-    "noteCompte": 17,
-    "created_at": "2024-01-27T00:00:00.000Z"
+  "nom": "Riz Blanc 5kg",
+  "boutique": {
+    "$oid": "6984f4926431e474dbe3ef22"
   },
-
-
-
-
-
-
-
-
-
-  {
-    "nom": "Lunettes de vue Classique",
-    "boutique": { "$oid": "6984f4926431e474dbe3ef28"},
-    "description": "Monture élégante pour homme et femme.",
-    "prix": 220000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
-        "public_id": "optic_lunettes"
-      }
-    ],
-    "noteMoyenne": 4.5,
-    "noteCompte": 9,
-    "created_at": "2024-01-27T00:00:00.000Z"
+  "description": "Riz blanc de qualité supérieure.",
+  "prix": 25000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1586201375761-83865001e31c",
+      "public_id": "jumbo_riz"
+    }
+  ],
+  "noteMoyenne": 4.5,
+  "noteCompte": 30,
+  "created_at": "2024-01-27T00:00:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2b6"
   },
-  {
-    "nom": "Lunettes de soleil Polarisées",
-    "boutique": { "$oid": "6984f4926431e474dbe3ef28"},
-    "description": "Protection UV 100% avec design moderne.",
-    "prix": 180000,
-    "images": [
-      {
-        "url": "https://images.unsplash.com/photo-1511499767150-a48a237f0083",
-        "public_id": "optic_sunglasses"
-      }
-    ],
-    "noteMoyenne": 4.7,
-    "noteCompte": 13,
-    "created_at": "2024-01-27T00:00:00.000Z"
-  }
-
-
-
-]
+  "nom": "Samsung Galaxy S24",
+  "boutique": {
+    "$oid": "6984f4926431e474dbe3ef23"
+  },
+  "description": "Smartphone dernière génération avec écran AMOLED.",
+  "prix": 4200000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf",
+      "public_id": "samsung_s24"
+    }
+  ],
+  "noteMoyenne": 4.8,
+  "noteCompte": 34,
+  "created_at": "2024-01-27T00:00:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2b7"
+  },
+  "nom": "Samsung Galaxy Buds Pro",
+  "boutique": {
+    "$oid": "6984f4926431e474dbe3ef23"
+  },
+  "description": "Écouteurs sans fil avec réduction de bruit active.",
+  "prix": 650000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1585386959984-a4155224a1ad",
+      "public_id": "samsung_buds"
+    }
+  ],
+  "noteMoyenne": 4.4,
+  "noteCompte": 19,
+  "created_at": "2024-01-27T00:00:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2b8"
+  },
+  "nom": "Routeur 4G Orange",
+  "boutique": {
+    "$oid": "6984f4926431e474dbe3ef2a"
+  },
+  "description": "Routeur 4G haute vitesse pour maison et bureau.",
+  "prix": 250000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7",
+      "public_id": "orange_routeur"
+    }
+  ],
+  "noteMoyenne": 4.3,
+  "noteCompte": 11,
+  "created_at": "2024-01-27T00:00:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2b9"
+  },
+  "nom": "Fond de teint longue tenue",
+  "boutique": {
+    "$oid": "6984f4926431e474dbe3ef24"
+  },
+  "description": "Fond de teint couvrance naturelle 24h.",
+  "prix": 95000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1586495777744-4413f21062fa",
+      "public_id": "beauty_fondteint"
+    }
+  ],
+  "noteMoyenne": 4.6,
+  "noteCompte": 14,
+  "created_at": "2024-01-27T00:00:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2ba"
+  },
+  "nom": "Parfum Floral Élégance",
+  "boutique": "6984f4926431e474dbe3ef24",
+  "description": "Parfum féminin aux notes florales raffinées.",
+  "prix": 180000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1594035910387-fea47794261f",
+      "public_id": "beauty_parfum"
+    }
+  ],
+  "noteMoyenne": 4.8,
+  "noteCompte": 21,
+  "created_at": "2024-01-27T00:00:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2bb"
+  },
+  "nom": "Fond de teint longue tenue",
+  "boutique": {
+    "$oid": "6984f4926431e474dbe3ef24"
+  },
+  "description": "Fond de teint couvrance naturelle 24h.",
+  "prix": 95000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1586495777744-4413f21062fa",
+      "public_id": "beauty_fondteint"
+    }
+  ],
+  "noteMoyenne": 4.6,
+  "noteCompte": 14,
+  "created_at": "2024-01-27T00:00:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2bc"
+  },
+  "nom": "Parfum Floral Élégance",
+  "boutique": {
+    "$oid": "6984f4926431e474dbe3ef24"
+  },
+  "description": "Parfum féminin aux notes florales raffinées.",
+  "prix": 180000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1594035910387-fea47794261f",
+      "public_id": "beauty_parfum"
+    }
+  ],
+  "noteMoyenne": 4.8,
+  "noteCompte": 21,
+  "created_at": "2024-01-27T00:00:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2bd"
+  },
+  "nom": "Burger Gourmet",
+  "boutique": {
+    "$oid": "6984f4926431e474dbe3ef26"
+  },
+  "description": "Burger maison avec steak premium.",
+  "prix": 30000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1550547660-d9450f859349",
+      "public_id": "food_burger"
+    }
+  ],
+  "noteMoyenne": 4.6,
+  "noteCompte": 52,
+  "created_at": "2024-01-27T00:00:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2be"
+  },
+  "nom": "Pizza Margherita",
+  "boutique": {
+    "$oid": "6984f4926431e474dbe3ef26"
+  },
+  "description": "Pizza traditionnelle sauce tomate et mozzarella.",
+  "prix": 45000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1548365328-5c7c3ac9a8e2",
+      "public_id": "food_pizza"
+    }
+  ],
+  "noteMoyenne": 4.4,
+  "noteCompte": 36,
+  "created_at": "2024-01-27T00:00:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2bf"
+  },
+  "nom": "Poêle antiadhésive 28cm",
+  "boutique": {
+    "$oid": "6984f4926431e474dbe3ef27"
+  },
+  "description": "Poêle durable avec revêtement antiadhésif.",
+  "prix": 80000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1586201375761-83865001e31c",
+      "public_id": "home_poele"
+    }
+  ],
+  "noteMoyenne": 4.3,
+  "noteCompte": 10,
+  "created_at": "2024-01-27T00:00:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2c0"
+  },
+  "nom": "Set Couteaux Cuisine Pro",
+  "boutique": {
+    "$oid": "6984f4926431e474dbe3ef27"
+  },
+  "description": "Ensemble de couteaux inox haute précision.",
+  "prix": 150000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1593618998160-e34014e67546",
+      "public_id": "home_couteaux"
+    }
+  ],
+  "noteMoyenne": 4.6,
+  "noteCompte": 17,
+  "created_at": "2024-01-27T00:00:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2c1"
+  },
+  "nom": "Lunettes de vue Classique",
+  "boutique": {
+    "$oid": "6984f4926431e474dbe3ef28"
+  },
+  "description": "Monture élégante pour homme et femme.",
+  "prix": 220000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
+      "public_id": "optic_lunettes"
+    }
+  ],
+  "noteMoyenne": 4.5,
+  "noteCompte": 9,
+  "created_at": "2024-01-27T00:00:00.000Z"
+},
+{
+  "_id": {
+    "$oid": "6999aa3d2621f8eeaa70f2c2"
+  },
+  "nom": "Lunettes de soleil Polarisées",
+  "boutique": {
+    "$oid": "6984f4926431e474dbe3ef28"
+  },
+  "description": "Protection UV 100% avec design moderne.",
+  "prix": 180000,
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1511499767150-a48a237f0083",
+      "public_id": "optic_sunglasses"
+    }
+  ],
+  "noteMoyenne": 4.7,
+  "noteCompte": 13,
+  "created_at": "2024-01-27T00:00:00.000Z"
+}]
