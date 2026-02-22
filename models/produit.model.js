@@ -11,13 +11,6 @@ const produitSchema = new mongoose.Schema(
             index: true,
         },
 
-        categorie: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Categorie",
-            required: false,
-            index: true,
-        },
-
         description: { type: String, default: "" },
         prix: { type: Number, default: 0 },
 

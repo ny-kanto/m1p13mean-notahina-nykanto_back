@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "6992cfd3b8fb67632d019ad5"
+  },
+  "nom": "Rakoto",
+  "prenom": "Andry",
+  "email": "andry@test.com",
+  "password": "$2b$10$isSqMBH.4ITMQv7nwPUMXOT67FyOleIkkaT/6BfqyFZXIlJgd2E32",
+  "role": "acheteur",
+  "boutique": null,
+  "favorisBoutiques": [
+    {
+      "$oid": "6984f4926431e474dbe3ef2a"
+    }
+  ],
+  "favorisProduits": [],
+  "createdAt": {
+    "$date": "2026-02-16T08:05:39.350Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-19T05:52:58.142Z"
+  },
+  "__v": 29
+}]
