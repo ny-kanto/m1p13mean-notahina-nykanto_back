@@ -8,6 +8,7 @@ import categorieRoutes from "./routes/categorie.routes.js";
 import authRoutes from "./routes/auth.routes.js";
 import zoneRoutes from "./routes/zone.routes.js";
 import favorisRoutes from "./routes/favoris.routes.js";
+import avisRoutes from "./routes/avis.routes.js";
 
 console.log("🚀 Serveur démarré");
 
@@ -35,6 +36,7 @@ app.use("/categories", categorieRoutes);
 app.use("/auth", authRoutes);
 app.use("/zones", zoneRoutes);
 app.use("/favoris", favorisRoutes);
+app.use("/avis", avisRoutes);
 
 // Démarrer le serveur
 const PORT = process.env.PORT || 3000;
