@@ -1,6 +1,7 @@
 // services/produit.service.js
 import Produit from "../models/produit.model.js";
 import cloudinary from "../config/cloudinary.js";
+import Promotion from "../models/promotion.model.js";
 
 class ProduitService {
   // =========================
