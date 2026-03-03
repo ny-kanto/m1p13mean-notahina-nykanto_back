@@ -9,6 +9,8 @@ import authRoutes from "./routes/auth.routes.js";
 import zoneRoutes from "./routes/zone.routes.js";
 import favorisRoutes from "./routes/favoris.routes.js";
 import avisRoutes from "./routes/avis.routes.js";
+import evenementRoutes from "./routes/evenement.routes.js";
+import promotionRoutes from "./routes/promotion.routes.js";
 
 console.log("🚀 Serveur démarré");
 
@@ -37,6 +39,8 @@ app.use("/auth", authRoutes);
 app.use("/zones", zoneRoutes);
 app.use("/favoris", favorisRoutes);
 app.use("/avis", avisRoutes);
+app.use("/evenements", evenementRoutes);
+app.use("/promotions", promotionRoutes);
 
 // Démarrer le serveur
 const PORT = process.env.PORT || 3000;
