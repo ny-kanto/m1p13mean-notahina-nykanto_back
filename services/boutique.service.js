@@ -230,6 +230,11 @@ class BoutiqueService {
             };
         }
 
+        if(!file) {
+            console.log("PAS DE NOUVELLE IMAGE, ON CONSERVE L'ANCIENNE");
+            boutique.image = boutique.image; // conserver l'image existante
+        }
+
         // ✅ Normaliser horaires (ferme = boolean)
         if (updateData.horaires) {
             const jours = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
