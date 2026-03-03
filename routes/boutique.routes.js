@@ -13,6 +13,8 @@ import {
     searchBoutiques
 } from '../controllers/boutique.controller.js';
 import authOptional from '../middlewares/authOptional.js';
+import auth from '../middlewares/auth.js';
+import { checkRole } from '../middlewares/role.js';
 
 const router = express.Router();
 
@@ -23,16 +25,14 @@ const router = express.Router();
 
 router.get('/', authOptional, getAllBoutiques);
 
-// router.get('/statistics', getStatistics);
-
-router.post('/search', searchBoutiques);
+router.post('/search', auth, checkRole('admin'), searchBoutiques);
 
 router.get('/:id', getBoutiqueById);
 
-router.post('/', upload.single('image'), createBoutique);
+router.post('/', auth, checkRole('admin'), upload.single('image'), createBoutique);
 
-router.put('/:id', upload.single('image'), updateBoutique);
+router.put('/:id', auth, checkRole('admin'), upload.single('image'), updateBoutique);
 
-router.delete('/:id', deleteBoutique);
+router.delete('/:id', auth, checkRole('admin'), deleteBoutique);
 
 export default router;
